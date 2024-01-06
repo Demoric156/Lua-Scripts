@@ -2,7 +2,7 @@
 
 Title: Ghostly Ink Mixer V1
 Description: Mixes ghostly ink, uses whatever necroplasm you set in first slot of inventory. Stops script when out of Materials of any kind.
-Date: 8/26/2023
+Date: 1/6/2024
 Author: Demoric
 Instructions:
     Start at GE
@@ -26,6 +26,8 @@ local ID = {
     lesser = 55599,
     Banker = 3418,
 }
+
+
 
 local function bank()
     if API.PInArea(3163,20,3484,20) then
@@ -72,7 +74,7 @@ while (API.Read_LoopyLoop()) do
         API.RandomSleep2(1000,1050,1500)
         if Necroplasm.itemid1 > 0 and Necroplasm.itemid1_size >= 20 then
             print("Mixing Ink")
-            API.DoAction_Interface(0x3e,0xd92f,1,1473,5,0,5392)
+            API.DoAction_Interface(0x3e,0xd92f,1,1473,5,0,5376)
             API.RandomSleep2(1000,1050,1500)
             API.KeyboardPress32(0x20,0)
             API.RandomSleep2(16000,1000,1050)
